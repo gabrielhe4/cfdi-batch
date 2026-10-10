@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CFDI SINTETICO para pruebas. No tiene validez fiscal. -->
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+    xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd"
+    Version="4.0" Serie="A" Folio="1003" Fecha="2026-09-25T11:00:00"
+    Sello="SELLO-SINTETICO" FormaPago="03" NoCertificado="30001000000500003416" Certificado="CERTIFICADO-SINTETICO"
+    SubTotal="1000.00" Moneda="MXN" Total="1200.00" TipoDeComprobante="I" Exportacion="01"
+    MetodoPago="PUE" LugarExpedicion="26015">
+  <cfdi:Emisor Rfc="EKU9003173C9" Nombre="ESCUELA KEMPER URGATE" RegimenFiscal="601"/>
+  <cfdi:Receptor Rfc="CNO200315KL7" Nombre="COMERCIAL DEL NORTE" DomicilioFiscalReceptor="64000" RegimenFiscalReceptor="601" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="43211507" NoIdentificacion="SOP-01" Cantidad="1" ClaveUnidad="H87"
+        Descripcion="Soporte para laptop" ValorUnitario="950.00" Importe="950.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="950.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="160.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="1000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital Version="1.1" UUID="0A9B8C7D-6E5F-4A3B-8C1D-2E3F4A5B6C7D" FechaTimbrado="2026-09-25T11:01:00"
+        RfcProvCertif="SPR190613I52" SelloCFD="SELLO-SINTETICO" NoCertificadoSAT="30001000000500003456"
+        SelloSAT="SELLO-SAT-SINTETICO"/>
+  </cfdi:Complemento>
+</cfdi:Comprobante>

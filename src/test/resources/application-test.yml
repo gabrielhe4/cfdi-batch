@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:cfdi;MODE=PostgreSQL
+    username: sa
+    password:
+  batch:
+    job:
+      enabled: false   # en pruebas el job se lanza con JobLauncherTestUtils
+
+cfdi:
+  chunk-size: 3        # chico a propósito para cruzar varios chunks
+  skip-limit: 100

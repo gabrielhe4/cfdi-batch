@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CFDI SINTETICO para pruebas. No tiene validez fiscal. -->
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+    xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd"
+    Version="4.0" Serie="H" Folio="77" Fecha="2026-09-10T18:40:00"
+    Sello="SELLO-SINTETICO" FormaPago="03" NoCertificado="30001000000500003416" Certificado="CERTIFICADO-SINTETICO"
+    SubTotal="10000.00" Descuento="500.00" Moneda="MXN" Total="9056.66" TipoDeComprobante="I" Exportacion="01"
+    MetodoPago="PUE" LugarExpedicion="06600">
+  <cfdi:Emisor Rfc="GORL850412AB3" Nombre="LAURA GOMEZ RAMIREZ" RegimenFiscal="612"/>
+  <cfdi:Receptor Rfc="EKU9003173C9" Nombre="ESCUELA KEMPER URGATE" DomicilioFiscalReceptor="26015" RegimenFiscalReceptor="601" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="80111600" NoIdentificacion="HON-SEP" Cantidad="1" ClaveUnidad="E48"
+        Descripcion="Honorarios por consultoria de software septiembre" ValorUnitario="10000.00" Importe="10000.00" Descuento="500.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="9500.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1520.00"/>
+        </cfdi:Traslados>
+        <cfdi:Retenciones>
+          <cfdi:Retencion Base="9500.00" Impuesto="001" TipoFactor="Tasa" TasaOCuota="0.100000" Importe="950.00"/>
+          <cfdi:Retencion Base="9500.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.106667" Importe="1013.34"/>
+        </cfdi:Retenciones>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosRetenidos="1963.34" TotalImpuestosTrasladados="1520.00">
+    <cfdi:Retenciones>
+      <cfdi:Retencion Impuesto="001" Importe="950.00"/>
+      <cfdi:Retencion Impuesto="002" Importe="1013.34"/>
+    </cfdi:Retenciones>
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="9500.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1520.00"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital Version="1.1" UUID="3A1C7D9E-2B4F-4E8A-9C61-7D2E5F0A8B13" FechaTimbrado="2026-09-10T18:41:10"
+        RfcProvCertif="SPR190613I52" SelloCFD="SELLO-SINTETICO" NoCertificadoSAT="30001000000500003456"
+        SelloSAT="SELLO-SAT-SINTETICO"/>
+  </cfdi:Complemento>
+</cfdi:Comprobante>

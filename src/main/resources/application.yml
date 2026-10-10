@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: cfdi-batch
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cfdi
+    username: cfdi
+    password: cfdi
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate          # el esquema lo maneja Flyway
+    properties:
+      hibernate:
+        jdbc.batch_size: 50       # inserts en lote
+        order_inserts: true
+  batch:
+    jdbc:
+      initialize-schema: always   # tablas de metadatos de Spring Batch (BATCH_*)
+    job:
+      name: cargaCfdiJob
+
+cfdi:
+  entrada: ./data/entrada
+  procesados: ./data/procesados
+  rechazados: ./data/rechazados
+  reportes: ./data/reportes
+  chunk-size: 50
+  skip-limit: 1000
+
+logging:
+  level:
+    mx.portafolio.cfdibatch: INFO

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CFDI SINTETICO para pruebas. No tiene validez fiscal. -->
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+    xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd"
+    Version="4.0" Serie="B" Folio="5501" Fecha="2026-10-01T12:00:00"
+    Sello="SELLO-SINTETICO" FormaPago="01" NoCertificado="30001000000500003416" Certificado="CERTIFICADO-SINTETICO"
+    SubTotal="751.50" Moneda="MXN" Total="871.74" TipoDeComprobante="I" Exportacion="01"
+    MetodoPago="PUE" LugarExpedicion="64000">
+  <cfdi:Emisor Rfc="CNO200315KL7" Nombre="COMERCIAL DEL NORTE" RegimenFiscal="601"/>
+  <cfdi:Receptor Rfc="XAXX010101000" Nombre="PUBLICO EN GENERAL" DomicilioFiscalReceptor="64000" RegimenFiscalReceptor="616" UsoCFDI="S01"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="50202306" NoIdentificacion="AGU-600" Cantidad="3" ClaveUnidad="H87"
+        Descripcion="Garrafon de agua 20 L" ValorUnitario="250.50" Importe="751.50" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="751.50" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="120.24"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="120.24">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="751.50" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="120.24"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital Version="1.1" UUID="8E4F1A2B-6C3D-4B5E-A7F8-9D0C1E2F3A4B" FechaTimbrado="2026-10-01T12:01:30"
+        RfcProvCertif="SPR190613I52" SelloCFD="SELLO-SINTETICO" NoCertificadoSAT="30001000000500003456"
+        SelloSAT="SELLO-SAT-SINTETICO"/>
+  </cfdi:Complemento>
+</cfdi:Comprobante>
